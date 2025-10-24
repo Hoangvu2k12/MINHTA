@@ -10,7 +10,7 @@ local bypassKey = table.find(allowedUsers, playerName) ~= nil
          Animation = "MINHTA V1"
          },
         Key = {
-        KeySystem = true,
+        KeySystem = not bypassKey,
         Title = "Key System",
         Description = "",
         KeyLink = "https://link4sub.com/ijB5",
