@@ -184,12 +184,12 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/H4xScripts/Loader/ref
   })
 --Murder Mystery 2
       AddButton(Tab3o, {
-     Name = "NAME",
+     Name = "Ronix Hub(have key)",
     Callback = function()
 	  local Settings = {
   JoinTeam = "Pirates"; -- Pirates/Marines
   Translator = true; -- true/false
 }
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/H4xScripts/Loader/refs/heads/main/loader.lua"))()
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/7d8a2a1a9a562a403b52532e58a14065.lua"))()
   end
