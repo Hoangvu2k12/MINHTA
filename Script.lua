@@ -36,6 +36,7 @@ local bypassKey = table.find(allowedUsers, playerName) ~= nil
 ------ Tab
      local Tab1o = MakeTab({Name = "tool"})
      local Tab2o = MakeTab({Name = "99 Nights In Forest"})
+     local Tab3o = MakeTab({Name = "Murder Mystery 2"})
 ------- BUTTON
     
     AddButton(Tab1o, {
@@ -181,3 +182,14 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/caomod2077/Script/ref
 loadstring(game:HttpGet("https://raw.githubusercontent.com/H4xScripts/Loader/refs/heads/main/loader.lua"))()
   end
   })
+--Murder Mystery 2
+      AddButton(Tab3o, {
+     Name = "NAME",
+    Callback = function()
+	  local Settings = {
+  JoinTeam = "Pirates"; -- Pirates/Marines
+  Translator = true; -- true/false
+}
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/H4xScripts/Loader/refs/heads/main/loader.lua"))()
+  end
