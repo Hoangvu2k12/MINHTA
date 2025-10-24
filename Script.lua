@@ -81,3 +81,15 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Exunys/Exunys-ESP/mai
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/7d8a2a1a9a562a403b52532e58a14065.lua"))()
   end
   })
+
+    AddButton(Tab2o, {
+     Name = "Ringta",
+    Callback = function()
+	  local Settings = {
+  JoinTeam = "Pirates"; -- Pirates/Marines
+  Translator = true; -- true/false
+}
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/wefwef127382/99daysloader.github.io/refs/heads/main/ringta.lua"))()
+  end
+  })
