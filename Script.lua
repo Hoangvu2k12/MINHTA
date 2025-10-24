@@ -51,7 +51,7 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/
   })
 
     AddButton(Tab1o, {
-     Name = "kill aura",
+     Name = "Kill aura",
     Callback = function()
 	  local Settings = {
   JoinTeam = "Pirates"; -- Pirates/Marines
@@ -63,7 +63,7 @@ lloadstring(game:HttpGet("https://raw.githubusercontent.com/Rawbr10/test/refs/he
   })
 
     AddButton(Tab1o, {
-     Name = "esp",
+     Name = "Esp",
     Callback = function()
 	  local Settings = {
   JoinTeam = "Pirates"; -- Pirates/Marines
@@ -119,5 +119,29 @@ loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/7d8a2a1a9a562a
 }
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/wefwef127382/99daysloader.github.io/refs/heads/main/ringta.lua"))()
+  end
+  })
+  
+      AddButton(Tab2o, {
+     Name = "FoxnameHub",
+    Callback = function()
+	  local Settings = {
+  JoinTeam = "Pirates"; -- Pirates/Marines
+  Translator = true; -- true/false
+}
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/caomod2077/Script/refs/heads/main/FoxnameHub.lua"))()
+  end
+  })
+  
+      AddButton(Tab2o, {
+     Name = "H4xScripts",
+    Callback = function()
+	  local Settings = {
+  JoinTeam = "Pirates"; -- Pirates/Marines
+  Translator = true; -- true/false
+}
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/H4xScripts/Loader/refs/heads/main/loader.lua"))()
   end
   })
