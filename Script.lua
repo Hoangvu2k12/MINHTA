@@ -26,7 +26,7 @@ local bypassKey = table.find(allowedUsers, playerName) ~= nil
 
        MinimizeButton({
        Image = "http://www.roblox.com/asset/?id=83711217259574",
-       Size = {60, 60},
+       Size = {40, 40},
        Color = Color3.fromRGB(10, 10, 10),
        Corner = true,
        Stroke = false,
@@ -75,7 +75,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Hoangvu2k12/MINHTA/re
   })
 
     AddButton(Tab1o, {
-     Name = "Universal Aimbot",
+     Name = "Aimbot pc",
     Callback = function()
 	  local Settings = {
   JoinTeam = "Pirates"; -- Pirates/Marines
