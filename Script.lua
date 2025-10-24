@@ -66,7 +66,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/agreed69-scripts/open
   Translator = true; -- true/false
 }
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Exunys/Exunys-ESP/main/src/ESP.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Hoangvu2k12/MINHTA/refs/heads/main/esp.lua"))()
   end
   })
 --99 Nights In Forest
