@@ -145,3 +145,15 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/caomod2077/Script/ref
 loadstring(game:HttpGet("https://raw.githubusercontent.com/H4xScripts/Loader/refs/heads/main/loader.lua"))()
   end
   })
+
+      AddButton(Tab2o, {
+     Name = "Elysium Hub",
+    Callback = function()
+	  local Settings = {
+  JoinTeam = "Pirates"; -- Pirates/Marines
+  Translator = true; -- true/false
+}
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/0jayz0/Elysium99nights/main/source.lua"))()
+  end
+  })
