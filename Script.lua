@@ -1,6 +1,6 @@
 loadstring(game:HttpGet(("https://raw.githubusercontent.com/daucobonhi/Ui-Redz-V2/refs/heads/main/UiREDzV2.lua")))()
 
-local allowedUsers = {"LV_NM12","LV_NM7"}
+local allowedUsers = {"LV_NM12","LV_NM5"}
 local playerName = game.Players.LocalPlayer.Name
 local bypassKey = table.find(allowedUsers, playerName) ~= nil
 
