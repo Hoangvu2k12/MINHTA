@@ -51,6 +51,18 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/
   })
 
     AddButton(Tab1o, {
+     Name = "esp",
+    Callback = function()
+	  local Settings = {
+  JoinTeam = "Pirates"; -- Pirates/Marines
+  Translator = true; -- true/false
+}
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Hoangvu2k12/MINHTA/refs/heads/main/esp.lua"))()
+  end
+  })
+
+    AddButton(Tab1o, {
      Name = "Universal Aimbot",
     Callback = function()
 	  local Settings = {
@@ -63,14 +75,14 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/agreed69-scripts/open
   })
 
     AddButton(Tab1o, {
-     Name = "esp",
+     Name = "Aimbot Mobile",
     Callback = function()
 	  local Settings = {
   JoinTeam = "Pirates"; -- Pirates/Marines
   Translator = true; -- true/false
 }
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Hoangvu2k12/MINHTA/refs/heads/main/esp.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/DanielHubll/DanielHubll/refs/heads/main/Aimbot%20Mobile"))()
   end
   })
 --99 Nights In Forest
