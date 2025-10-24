@@ -1,17 +1,17 @@
 loadstring(game:HttpGet(("https://raw.githubusercontent.com/daucobonhi/Ui-Redz-V2/refs/heads/main/UiREDzV2.lua")))()
 
-local allowedUsers = {"LV_NM12","LV_NM5"}
+local allowedUsers = {"LV_NM12","vip_nn67"}
 local playerName = game.Players.LocalPlayer.Name
 local bypassKey = table.find(allowedUsers, playerName) ~= nil
 
        local Window = MakeWindow({
          Hub = {
-         Title = "NINHTA V1",
-         Animation = "MINHTA V1"
+         Title = "NINHTA V1.1",
+         Animation = "Tiktok: hongthtminh"
          },
         Key = {
         KeySystem = not bypassKey,
-        Title = "Key System",
+        Title = "Key System(it will not save the key)",
         Description = "",
         KeyLink = "https://link4sub.com/ijB5",
         Keys = {"UzE7AvHp2Oq5Z8nT"},
@@ -135,7 +135,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/caomod2077/Script/ref
   })
   
       AddButton(Tab2o, {
-     Name = "H4xScripts",
+     Name = "H4xScripts(have key)",
     Callback = function()
 	  local Settings = {
   JoinTeam = "Pirates"; -- Pirates/Marines
