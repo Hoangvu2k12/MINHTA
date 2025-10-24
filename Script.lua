@@ -193,3 +193,14 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/H4xScripts/Loader/ref
 
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/7d8a2a1a9a562a403b52532e58a14065.lua"))()
   end
+
+      AddButton(Tab3o, {
+     Name = "Elysium Hub",
+    Callback = function()
+	  local Settings = {
+  JoinTeam = "Pirates"; -- Pirates/Marines
+  Translator = true; -- true/false
+}
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/0jayz0/mm2esp/refs/heads/main/source.lua'))()
+  end
