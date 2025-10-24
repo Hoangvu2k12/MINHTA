@@ -61,6 +61,42 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/
 lloadstring(game:HttpGet("https://raw.githubusercontent.com/Rawbr10/test/refs/heads/main/Kill%20All%20Script%20Universal"))()
   end
   })
+  
+    AddButton(Tab1o, {
+     Name = "hitbox",
+    Callback = function()
+	  local Settings = {
+  JoinTeam = "Pirates"; -- Pirates/Marines
+  Translator = true; -- true/false
+}
+
+loadstring(game:HttpGet("https://pastefy.app/ItfO0tdg/raw"))()
+  end
+  })
+
+    AddButton(Tab1o, {
+     Name = "FlyGuiV3",
+    Callback = function()
+	  local Settings = {
+  JoinTeam = "Pirates"; -- Pirates/Marines
+  Translator = true; -- true/false
+}
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()
+  end
+  })
+
+    AddButton(Tab1o, {
+     Name = "Wall hop",
+    Callback = function()
+	  local Settings = {
+  JoinTeam = "Pirates"; -- Pirates/Marines
+  Translator = true; -- true/false
+}
+
+loadstring(game:HttpGet("https://github.com/codzal/rbxscripts/raw/refs/heads/main/wallhop.lua"))()
+  end
+  })
 
     AddButton(Tab1o, {
      Name = "Esp",
@@ -143,17 +179,5 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/caomod2077/Script/ref
 }
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/H4xScripts/Loader/refs/heads/main/loader.lua"))()
-  end
-  })
-
-      AddButton(Tab2o, {
-     Name = "Elysium Hub",
-    Callback = function()
-	  local Settings = {
-  JoinTeam = "Pirates"; -- Pirates/Marines
-  Translator = true; -- true/false
-}
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/0jayz0/Elysium99nights/main/source.lua"))()
   end
   })
