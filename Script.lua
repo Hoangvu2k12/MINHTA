@@ -39,7 +39,6 @@ local bypassKey = table.find(allowedUsers, playerName) ~= nil
      local Tab3o = MakeTab({Name = "Murder Mystery 2"})
      local Tab4o = MakeTab({Name = "Blox Fruits"})
 ------- BUTTON
-    
     AddButton(Tab1o, {
      Name = "infinite yield",
     Callback = function()
@@ -289,11 +288,6 @@ loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/3b2169cf53bc61
 	  local Settings = {
   JoinTeam = "Pirates"; -- Pirates/Marines
   Translator = true; -- true/false
-}
-
-local Settings = {
-    JoinTeam = "Pirates"; -- Pirates / Marines
-    Translator = true;   -- true / false
 }
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/tlredz/Scripts/refs/heads/main/main.luau"))(Settings)
