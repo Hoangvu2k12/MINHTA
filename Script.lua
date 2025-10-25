@@ -52,6 +52,18 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/
   })
 
     AddButton(Tab1o, {
+     Name = "God mode",
+    Callback = function()
+	  local Settings = {
+  JoinTeam = "Pirates"; -- Pirates/Marines
+  Translator = true; -- true/false
+}
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Rawbr10/Roblox-Scripts/refs/heads/main/God%20Mode%20Script%20Universal"))()
+  end
+  })
+
+    AddButton(Tab1o, {
      Name = "Kill aura",
     Callback = function()
 	  local Settings = {
