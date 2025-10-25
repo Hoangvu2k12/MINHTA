@@ -251,7 +251,6 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/wave-code-top/xhub/re
 }
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/vertex-peak/vertex/refs/heads/main/loadstring"))()
-
   end
   })
 
@@ -305,4 +304,3 @@ loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/3b2169cf53bc61
 loadstring(game:HttpGet("https://raw.githubusercontent.com/tlredz/Scripts/refs/heads/main/main.luau"))
   end
   })
-  
