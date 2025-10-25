@@ -6,7 +6,7 @@ local bypassKey = table.find(allowedUsers, playerName) ~= nil
 
        local Window = MakeWindow({
          Hub = {
-         Title = "NINHTA V1.1",
+         Title = "NINHTA V1.2",
          Animation = "Tiktok: hongthtminh"
          },
         Key = {
@@ -37,6 +37,7 @@ local bypassKey = table.find(allowedUsers, playerName) ~= nil
      local Tab1o = MakeTab({Name = "tool"})
      local Tab2o = MakeTab({Name = "99 Nights In Forest"})
      local Tab3o = MakeTab({Name = "Murder Mystery 2"})
+     local Tab4o = MakeTab({Name = "Blox Fruits"})
 ------- BUTTON
     
     AddButton(Tab1o, {
@@ -215,5 +216,69 @@ loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/7d8a2a1a9a562a
 }
 
 loadstring(game:HttpGet('https://raw.githubusercontent.com/0jayz0/mm2esp/refs/heads/main/source.lua'))()
+  end
+  })
+
+      AddButton(Tab3o, {
+     Name = "xhub",
+    Callback = function()
+	  local Settings = {
+  JoinTeam = "Pirates"; -- Pirates/Marines
+  Translator = true; -- true/false
+}
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/wave-code-top/xhub/refs/heads/main/xhub.lua", true))()
+  end
+  })
+
+      AddButton(Tab3o, {
+     Name = "vertex hub",
+    Callback = function()
+	  local Settings = {
+  JoinTeam = "Pirates"; -- Pirates/Marines
+  Translator = true; -- true/false
+}
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/vertex-peak/vertex/refs/heads/main/loadstring"))()
+
+  end
+  })
+
+      AddButton(Tab3o, {
+     Name = "YTB: AzuraDev",
+    Callback = function()
+	  local Settings = {
+  JoinTeam = "Pirates"; -- Pirates/Marines
+  Translator = true; -- true/false
+}
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Azura83/Murder-Mystery-2/refs/heads/main/Script.lua"))()
+  end
+  })
+--Blox Fruits
+      AddButton(Tab4o, {
+     Name = "Styxz Hub",
+    Callback = function()
+	  local Settings = {
+  JoinTeam = "Pirates"; -- Pirates/Marines
+  Translator = true; -- true/false
+}
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ToshyWare/StyxzHub/main/Styxz.lua"))()
+  end
+  })
+
+      AddButton(Tab4o, {
+     Name = "w azure hub",
+    Callback = function()
+	  local Settings = {
+  JoinTeam = "Pirates"; -- Pirates/Marines
+  Translator = true; -- true/false
+}
+
+getgenv().Team = "Pirates"
+getgenv().FixCrash = false -- Turn it On For Hopping Server, Improve Performance But Silent Aim On Mob And Player
+getgenv().FixCrash2 = false -- Turn it On For Hopping Server, Improve Performance But Will Remove Speed Changer
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/3b2169cf53bc6104dabe8e19562e5cc2.lua"))()
   end
   })
