@@ -147,6 +147,18 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/agreed69-scripts/open
 loadstring(game:HttpGet("https://raw.githubusercontent.com/DanielHubll/DanielHubll/refs/heads/main/Aimbot%20Mobile"))()
   end
   })
+  
+     AddButton(Tab1o, {
+     Name = "soxcy hub(fix lag)",
+    Callback = function()
+	  local Settings = {
+  JoinTeam = "Pirates"; -- Pirates/Marines
+  Translator = true; -- true/false
+}
+
+loadstring(game:HttpGet("https://gist.githubusercontent.com/soxcy-script/43d2bdff01a1c751ac60ddc440f4f713/raw"))()
+  end
+  })
 --99 Nights In Forest
     AddButton(Tab2o, {
      Name = "Ronix Hub(have key)",
@@ -208,7 +220,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/0jayz0/Elysium99night
   end
   })
   
-      AddButton(Tabo, {
+      AddButton(Tab2o, {
      Name = "ToastyXD Hub",
     Callback = function()
 	  local Settings = {
@@ -232,7 +244,7 @@ loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/7d8a2a1a9a562a
   end
   })
       AddButton(Tab3o, {
-     Name = "Elysium Hub",
+     Name = "Elysium Hub(esp)",
     Callback = function()
 	  local Settings = {
   JoinTeam = "Pirates"; -- Pirates/Marines
@@ -240,42 +252,6 @@ loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/7d8a2a1a9a562a
 }
 
 loadstring(game:HttpGet('https://raw.githubusercontent.com/0jayz0/mm2esp/refs/heads/main/source.lua'))()
-  end
-  })
-
-      AddButton(Tab3o, {
-     Name = "xhub",
-    Callback = function()
-	  local Settings = {
-  JoinTeam = "Pirates"; -- Pirates/Marines
-  Translator = true; -- true/false
-}
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/wave-code-top/xhub/refs/heads/main/xhub.lua", true))()
-  end
-  })
-
-      AddButton(Tab3o, {
-     Name = "vertex hub",
-    Callback = function()
-	  local Settings = {
-  JoinTeam = "Pirates"; -- Pirates/Marines
-  Translator = true; -- true/false
-}
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/vertex-peak/vertex/refs/heads/main/loadstring"))()
-  end
-  })
-
-      AddButton(Tab3o, {
-     Name = "YTB: AzuraDev",
-    Callback = function()
-	  local Settings = {
-  JoinTeam = "Pirates"; -- Pirates/Marines
-  Translator = true; -- true/false
-}
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Azura83/Murder-Mystery-2/refs/heads/main/Script.lua"))()
   end
   })
 --Blox Fruits
