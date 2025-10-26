@@ -27,7 +27,7 @@ local bypassKey = table.find(allowedUsers, playerName) ~= nil
        MinimizeButton({
        Image = "http://www.roblox.com/asset/?id=83711217259574",
        Size = {40, 40},
-       Color = Color3.fromRGB(10, 10, 10),
+       Color = Color3.fromRGB(7, 7, 7),
        Corner = true,
        Stroke = false,
        StrokeColor = Color3.fromRGB(255, 0, 0)
@@ -38,6 +38,7 @@ local bypassKey = table.find(allowedUsers, playerName) ~= nil
      local Tab2o = MakeTab({Name = "99 Nights In Forest"})
      local Tab3o = MakeTab({Name = "Murder Mystery 2"})
      local Tab4o = MakeTab({Name = "Blox Fruits"})
+     local Tab5o = MakeTab({Name = "Forsaken"})
 ------- BUTTON
     AddButton(Tab1o, {
      Name = "infinite yield",
@@ -71,7 +72,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Rawbr10/Roblox-Script
   Translator = true; -- true/false
 }
 
-lloadstring(game:HttpGet("https://raw.githubusercontent.com/Rawbr10/test/refs/heads/main/Kill%20All%20Script%20Universal"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Rawbr10/test/refs/heads/main/Kill%20All%20Script%20Universal"))()
   end
   })
   
