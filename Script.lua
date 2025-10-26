@@ -6,7 +6,7 @@ local bypassKey = table.find(allowedUsers, playerName) ~= nil
 
        local Window = MakeWindow({
          Hub = {
-         Title = "NINHTA V1.2",
+         Title = "NINHTA V1.5",
          Animation = "Tiktok: hongthtminh"
          },
         Key = {
