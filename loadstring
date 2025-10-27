@@ -1,1 +1,4 @@
-loadstring(game:HttpGet(("https://raw.githubusercontent.com/Hoangvu2k12/MINHTA/refs/heads/main/Script.lua")))()
+ScriptAnh
+loadstringHttpGet(("https://raw.githubusercontent.com/Hoangvu2k12/MINHTA/refs/heads/main/ScriptAnh.lua")))()
+ScriptVN
+loadstringHttpGet(("https://raw.githubusercontent.com/Hoangvu2k12/MINHTA/refs/heads/main/ScriptVN.lua")))()
