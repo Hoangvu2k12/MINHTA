@@ -34,19 +34,21 @@ local Window = Rayfield:CreateWindow({
 -- 📂 Tạo các Tab giống menu cũ
 -------------------------------------------------------
 local Tab1 = Window:CreateTab("tool", 4483362458)
-local Tab2 = Window:CreateTab("Combat")
+local Tab2 = Window:CreateTab("Combat", 4483362458)
 local Tab3 = Window:CreateTab("ESP", 4483362458)
 local Tab4 = Window:CreateTab("Misc", 4483362458)
 local Tab5 = Window:CreateTab("Hub", 4483362458)
 
+-------------------------------------------------------
+-- 🔘 MAIN TAB – các nút mẫu
+-------------------------------------------------------
 Tab1:CreateSection("tool")
 
-Tab1:CreateButton({
-    Name = "infinite yield",
-    Callback = function()
-loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
-        })
-    end
+local Button = Tab:CreateButton({
+   Name = "Button Example",
+   Callback = function()
+   loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+   end,
 })
 
 Tab1:CreateToggle({
