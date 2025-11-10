@@ -5,26 +5,40 @@ local playerName = game.Players.LocalPlayer.Name
 local bypassKey = table.find(allowedUsers, playerName) ~= nil
 
 local Window = Rayfield:CreateWindow({
-    Name = "MINHTA V1.6",
-    LoadingTitle = "Tiktok: hongthtminh",
-    LoadingSubtitle = "Đang tải MINHTA",
+   Name = "MINHTA V1.6",
+   Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
+   LoadingTitle = "Tiktok: hongthtminh",
+   LoadingSubtitle = "Đang tải MINHTA",
+   ShowText = "MINHTA", -- for mobile users to unhide rayfield, change if you'd like
+   Theme = "Default", -- Check https://docs.sirius.menu/rayfield/configuration/themes
 
-    ConfigurationSaving = {
-        Enabled = true,
-        FolderName = "MINHTA_Config",
-        FileName = "Config1"
-    },
+   ToggleUIKeybind = "K", -- The keybind to toggle the UI visibility (string like "K" or Enum.KeyCode)
 
-    KeySystem = not bypassKey,    -- bật Key nếu không nằm trong danh sách bypass
-    KeySettings = {
-        Title = "Key System",
-        Subtitle = "Nhập key để vào Hub",
-        Note = "Key dành cho người không nằm trong bypass",
-        FileName = "MINHTA_Key",
-        SaveKey = false,
-        GrabKeyFromSite = false,
-        Key = {"UzE7AvHp2Oq5Z8nT"}
-    }
+   DisableRayfieldPrompts = false,
+   DisableBuildWarnings = false, -- Prevents Rayfield from warning when the script has a version mismatch with the interface
+
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "Big Hub"
+   },
+
+   Discord = {
+      Enabled = false, -- Prompt the user to join your Discord server if their executor supports it
+      Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ ABCD would be ABCD
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   },
+
+   KeySystem = false, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "Untitled",
+      Subtitle = "Key System",
+      Note = "No method of obtaining the key is provided", -- Use this to tell the user how to get a key
+      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = {"Hello"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+   }
 })
 
 local Tab1 = Window:CreateTab("tool", 4483362458)
