@@ -3,7 +3,7 @@ local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 -------------------------------------------------------
 -- ⚙️ Bypass Key
 -------------------------------------------------------
-local allowedUsers = {""}
+local allowedUsers = {"hdhjs537"}
 local playerName = game.Players.LocalPlayer.Name
 local bypassKey = table.find(allowedUsers, playerName) ~= nil
 
