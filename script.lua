@@ -42,10 +42,8 @@ local Tab5 = Window:CreateTab("Hub", 4483362458)
 -------------------------------------------------------
 -- 🔘 MAIN TAB – các nút mẫu
 -------------------------------------------------------
-Tab1:CreateSection("tool")
-
-local Button = Tab:CreateButton({
-   Name = "Button Example",
+local Button = Tab1:CreateButton({
+   Name = "infinite yield,
    Callback = function()
    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
    end,
