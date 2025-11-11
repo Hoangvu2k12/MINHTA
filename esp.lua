@@ -1,58 +1,75 @@
---  Cải tiến ESP Highlight (Adornee + Quản lý đúng cách)
+-- ESP cải tiến: Định vị tốt nhất - chỉ highlight HumanoidRootPart
 local Players = game:GetService("Players")
-local RunService = game:GetService("RunService")
 local LocalPlayer = Players.LocalPlayer
 
--- Gán highlight vào từng player (trừ chính mình)
+-- Thêm highlight vào HumanoidRootPart
 local function addHighlight(player)
     if player == LocalPlayer then return end
-    if not player.Character or not player.Character:FindFirstChild("HumanoidRootPart") then return end
+    local character = player.Character
+    if not character or not character:FindFirstChild("HumanoidRootPart") then return end
 
-    local already = player.Character:FindFirstChild("ESP_Highlight")
-    if already then return end
+    -- Nếu đã có highlight thì cập nhật Adornee nếu cần
+    local highlight = character:FindFirstChild("ESP_Highlight")
+    if not highlight then
+        highlight = Instance.new("Highlight")
+        highlight.Name = "ESP_Highlight"
+        highlight.FillColor = Color3.fromRGB(0, 255, 0)  -- Màu xanh lá cây
+        highlight.FillTransparency = 0.2
+        highlight.OutlineColor = Color3.fromRGB(255, 255, 0) -- Màu vàng nổi bật
+        highlight.OutlineTransparency = 0.1
+        highlight.Parent = character
+    end
 
-    local highlight = Instance.new("Highlight")
-    highlight.Name = "ESP_Highlight"
-    highlight.FillColor = Color3.fromRGB(0, 255, 0)         -- đổi sang màu xanh lá
-    highlight.FillTransparency = 0.3
-    highlight.OutlineColor = Color3.fromRGB(0, 0, 0)        -- giữ màu viền tối để nền không bị lóa (hoặc cùng màu để ẩn)
-    highlight.OutlineTransparency = 1                      -- ẩn viền
-    highlight.Adornee = player.Character                   -- hoặc .HumanoidRootPart
+    highlight.Adornee = character:FindFirstChild("HumanoidRootPart") -- Định vị chính xác
     highlight.Enabled = true
-    highlight.Parent = player.Character
 end
 
--- Xoá highlight khi người chơi rời game hoặc chết
+-- Xoá highlight khi nhân vật rời đi hoặc chết
 local function removeHighlight(player)
-    if player.Character then
-        local h = player.Character:FindFirstChild("ESP_Highlight")
-        if h then
-            h:Destroy()
+    local character = player.Character
+    if character then
+        local highlight = character:FindFirstChild("ESP_Highlight")
+        if highlight then
+            highlight:Destroy()
         end
     end
 end
 
--- Kết nối với player mới
-Players.PlayerAdded:Connect(function(player)
-    player.CharacterAdded:Connect(function()
-        wait(1)  -- đợi nhân vật load
-        addHighlight(player)
-    end)
-    player.CharacterRemoving:Connect(function()
-        removeHighlight(player)
-    end)
-end)
-
--- Khởi tạo cho người đã có sẵn trong game
-for _, player in ipairs(Players:GetPlayers()) do
-    if player ~= LocalPlayer and player.Character then
-        addHighlight(player)
+-- Theo dõi khi HumanoidRootPart xuất hiện (do respawn/tp/morph)
+local function monitorCharacter(player)
+    local function onCharacterAdded(character)
+        local function tryAdd()
+            if character:FindFirstChild("HumanoidRootPart") then
+                addHighlight(player)
+            end
+        end
+        tryAdd()
+        character.ChildAdded:Connect(function(child)
+            if child.Name == "HumanoidRootPart" then
+                addHighlight(player)
+            end
+        end)
     end
-    player.CharacterAdded:Connect(function()
-        wait(1)
-        addHighlight(player)
-    end)
+
+    if player.Character then
+        onCharacterAdded(player.Character)
+    end
+    player.CharacterAdded:Connect(onCharacterAdded)
     player.CharacterRemoving:Connect(function()
         removeHighlight(player)
     end)
 end
+
+-- Gắn cho mọi player trừ LocalPlayer
+for _, player in ipairs(Players:GetPlayers()) do
+    if player ~= LocalPlayer then
+        monitorCharacter(player)
+    end
+end
+
+-- Kết nối với player mới vào game
+Players.PlayerAdded:Connect(function(player)
+    if player ~= LocalPlayer then
+        monitorCharacter(player)
+    end
+end)
